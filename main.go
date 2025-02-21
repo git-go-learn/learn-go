@@ -20,12 +20,13 @@ func main() {
 
 	// Run git add .
 	exec.Command("git", "add", ".").CombinedOutput()
+	fmt.Println("Added!")
 
 	// Run git commit -m "commitMessage"
 	exec.Command("git", "commit", "-m", commitMessage).CombinedOutput()
+	fmt.Println("Commited!")
 
 	// Run git push origin branchName
 	exec.Command("git", "push", "origin", branchName).CombinedOutput()
-	
-	fmt.Println("Commands executed.")
+	fmt.Println("Pushed!")
 }
